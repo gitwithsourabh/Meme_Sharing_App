@@ -4,18 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D3CBD3"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/memeImageView"
         android:layout_width="300dp"
         android:layout_height="300dp"
+
         android:contentDescription="image"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
          />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@id/memeImageView"
+        app:layout_constraintLeft_toLeftOf="@+id/memeImageView"
+        app:layout_constraintRight_toRightOf="@+id/memeImageView"/>
+
 
     <Button
         android:id="@+id/button"
@@ -23,6 +35,7 @@
         android:layout_height="wrap_content"
         android:onClick="shareMeme"
         android:text="@string/share"
+        android:backgroundTint="#EE322414"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +46,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="nextMeme"
+        android:backgroundTint="#EE322414"
         android:text="@string/next0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
